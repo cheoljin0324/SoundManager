@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
+
+    public AudioClip[] ClipList;
+
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        ClipList = FindObjectsOfType<AudioClip>();
     }
 }
