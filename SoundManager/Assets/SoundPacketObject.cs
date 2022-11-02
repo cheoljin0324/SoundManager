@@ -6,7 +6,7 @@ using UnityEngine;
 public class SoundPacketObject : ScriptableObject
 {
     [Header("»ç¿îµå")]
-    public SoundData soundData;
+    public List<SoundData> soundData;
 }
 
 [System.Serializable]

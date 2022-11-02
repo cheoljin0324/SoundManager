@@ -12,6 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f554d4e1cb137b04a9726ba7142696b9, type: 3}
   m_Name: SoundObject
   m_EditorClassIdentifier: 
-  soundData:
-    name: 
-    AudioData: []
+  soundData: []
