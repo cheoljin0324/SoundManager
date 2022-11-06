@@ -23,6 +23,7 @@ public class SoundManager : MonoBehaviour
             {
                 if(audioClipBases[j].clipBaseName == ClipList.soundData[i].name)
                 {
+                    for(int c = 0; j< ClipList.soundData[i].AudioData.Count; )
                     audioClipBases[j].audioBase = ClipList.soundData[i].AudioData;
                 }
             }

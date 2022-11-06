@@ -9,25 +9,23 @@ public class SoundComponentSetting : MonoBehaviour
         switch (packet.audioType) 
         {
             case AudioType.None:
-                return;
                 break;
             case AudioType.AudioContainer:
-                AudioContainerSetting(packet);
+                AudioContainerSetting();
                 break;
             case AudioType.AudioEffect:
-                AudioEffectSetting(packet);
+                AudioEffectSetting();
                 break;
             case AudioType.LinkList:
-                AudioListSetting(packet);
+                AudioListSetting();
                 break;
             default:
-                return;
                     break;
         }
 
     }
 
-    void AudioContainerSetting(SoundData packet)
+    void AudioContainerSetting()
     {
         GameObject audioContainer = new GameObject("AudioContainer");
         audioContainer = Instantiate(audioContainer);
@@ -35,13 +33,19 @@ public class SoundComponentSetting : MonoBehaviour
         audioContainer.AddComponent<AudioContainer>();
     }
 
-    void AudioEffectSetting(SoundData packet)
+    void AudioEffectSetting()
     {
+        GameObject audioContainer = new GameObject("AudioEffect");
+        audioContainer = Instantiate(audioContainer);
 
+        audioContainer.AddComponent<AudioEffect>();
     }
 
-    void AudioListSetting(SoundData packet)
+    void AudioListSetting()
     {
+        GameObject audioContainer = new GameObject("AudioList");
+        audioContainer = Instantiate(audioContainer);
 
+        audioContainer.AddComponent<AudioList>();
     }
 }
